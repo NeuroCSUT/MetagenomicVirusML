@@ -1,0 +1,115 @@
+<bound method Namespace._get_kwargs of Namespace(activation='relu', batch_size=100, binary=True, class_weight_power=0.25, datatype='concat', dropout=0.25, epochs=10, hidden_nodes=1024, layers=2, leave_out=16, lr=0.001, lr_epochs=1, lr_factor=0.95, optimizer='adam', oversample=None, plot_only=False, save_best_model_only=False, save_path='final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95', train_shuffle='true', verbose=2)>
+using datatype: concat
+EXPERIMENTS:  ['011_G5_96ALL-MiSeq.fa' '011_N19_VIRASKINFAPMISEQ.fa' '013_E2_SCC.fa'
+ '013_H4.fa' '014_B_Prostate.fa' '014_D3_Diabetes_Hyoty.fa'
+ '014_E1_30CxC.fa' '014_F1_PARAFFINBLANKBLOCKS.fa'
+ '014_G1_MS5CASES5CONTROLS.fa' '014_G5_Hultin_MS.fa' '014_G6_Hultin_MS.fa'
+ '014_G7_MSNEW2.fa' '014_J1_FRISKDIABETES.fa' '014_N1_Anethovirus.fa'
+ '014_O-Q1_Larynx.fa' '014_P_Lagheden_Matti-HPV-vacc-CIN3.fa'
+ '014_R1_Hultin_Caski.fa' '015_F2_20160119.fa'
+ '015_F_Lagheden_ACCES_HPVneg.fa'] 19
+0 011_G5_96ALL-MiSeq.fa (1, 14634)
+1 011_N19_VIRASKINFAPMISEQ.fa (1, 2453)
+2 013_E2_SCC.fa (1, 4553)
+3 013_H4.fa (1, 2066)
+4 014_B_Prostate.fa (1, 2460)
+5 014_D3_Diabetes_Hyoty.fa (1, 422)
+6 014_E1_30CxC.fa (1, 5768)
+7 014_F1_PARAFFINBLANKBLOCKS.fa (1, 5294)
+8 014_G1_MS5CASES5CONTROLS.fa (1, 9234)
+9 014_G5_Hultin_MS.fa (1, 23739)
+10 014_G6_Hultin_MS.fa (1, 14218)
+11 014_G7_MSNEW2.fa (1, 1898)
+12 014_J1_FRISKDIABETES.fa (1, 9642)
+13 014_N1_Anethovirus.fa (1, 829)
+14 014_O-Q1_Larynx.fa (1, 32739)
+15 014_P_Lagheden_Matti-HPV-vacc-CIN3.fa (1, 8110)
+16 014_R1_Hultin_Caski.fa (1, 31743)
+17 015_F2_20160119.fa (1, 7479)
+18 015_F_Lagheden_ACCES_HPVneg.fa (1, 11320)
+------------LEAVE OUT--------------
+we are using EXPERIMENT LEAVE OUT (exp= 16 ). 
+ Train and test sizes: (156858,) (31743,)
+counts of classes in training set : [152644   4214]
+counts of classes in test: [30292  1451]  virus shape  (1, 1451)
+------------ CLASS WEIGHT CALCULATION --------------
+class weights [ 1.          2.45327539]
+Creating model...
+____________________________________________________________________________________________________
+Layer (type)                     Output Shape          Param #     Connected to                     
+====================================================================================================
+dense_1 (Dense)                  (None, 1024)          61440       dense_input_1[0][0]              
+____________________________________________________________________________________________________
+dropout_1 (Dropout)              (None, 1024)          0           dense_1[0][0]                    
+____________________________________________________________________________________________________
+dense_2 (Dense)                  (None, 1024)          1049600     dropout_1[0][0]                  
+____________________________________________________________________________________________________
+dropout_2 (Dropout)              (None, 1024)          0           dense_2[0][0]                    
+____________________________________________________________________________________________________
+dense_3 (Dense)                  (None, 2)             2050        dropout_2[0][0]                  
+____________________________________________________________________________________________________
+activation_1 (Activation)        (None, 2)             0           dense_3[0][0]                    
+====================================================================================================
+Total params: 1,113,090
+Trainable params: 1,113,090
+Non-trainable params: 0
+____________________________________________________________________________________________________
+Compiling model with class weights...
+Train on 156858 samples, validate on 31743 samples
+Epoch 1: learning rate 0.001
+Epoch 1/10
+Epoch 00000: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.2084 - val_loss: 0.3950
+Epoch 2: learning rate 0.00095
+Epoch 2/10
+Epoch 00001: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1904 - val_loss: 0.4069
+Epoch 3: learning rate 0.0009025
+Epoch 3/10
+Epoch 00002: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1835 - val_loss: 0.3939
+Epoch 4: learning rate 0.000857375
+Epoch 4/10
+Epoch 00003: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1793 - val_loss: 0.3699
+Epoch 5: learning rate 0.000814506
+Epoch 5/10
+Epoch 00004: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1753 - val_loss: 0.4162
+Epoch 6: learning rate 0.000773781
+Epoch 6/10
+Epoch 00005: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1710 - val_loss: 0.3914
+Epoch 7: learning rate 0.000735092
+Epoch 7/10
+Epoch 00006: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1673 - val_loss: 0.3821
+Epoch 8: learning rate 0.000698337
+Epoch 8/10
+Epoch 00007: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1627 - val_loss: 0.4426
+Epoch 9: learning rate 0.00066342
+Epoch 9/10
+Epoch 00008: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1596 - val_loss: 0.4054
+Epoch 10: learning rate 0.000630249
+Epoch 10/10
+Epoch 00009: saving model to final_LOEO_cw/LOO_16_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95.hdf5
+5s - loss: 0.1565 - val_loss: 0.3719
+----------------------train set---------------------------
+             precision    recall  f1-score   support
+
+  not virus       0.98      1.00      0.99    152644
+      virus       0.74      0.29      0.41      4214
+
+avg / total       0.97      0.98      0.97    156858
+
+----------------------test set---------------------------
+             precision    recall  f1-score   support
+
+  not virus       0.95      1.00      0.98     30292
+      virus       0.16      0.01      0.02      1451
+
+avg / total       0.92      0.95      0.93     31743
+
+predictions shape (31743, 2)

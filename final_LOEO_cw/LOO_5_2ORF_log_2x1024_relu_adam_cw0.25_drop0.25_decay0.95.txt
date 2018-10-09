@@ -1,0 +1,35 @@
+<bound method Namespace._get_kwargs of Namespace(activation='relu', batch_size=100, binary=True, class_weight_power=0.25, datatype='concat', dropout=0.25, epochs=10, hidden_nodes=1024, layers=2, leave_out=5, lr=0.001, lr_epochs=1, lr_factor=0.95, optimizer='adam', oversample=None, plot_only=False, save_best_model_only=False, save_path='final_LOEO_cw/LOO_5_2ORF_model2x1024_relu_adam_cw0.25_drop0.25_decay0.95', train_shuffle='true', verbose=2)>
+using datatype: concat
+EXPERIMENTS:  ['011_G5_96ALL-MiSeq.fa' '011_N19_VIRASKINFAPMISEQ.fa' '013_E2_SCC.fa'
+ '013_H4.fa' '014_B_Prostate.fa' '014_D3_Diabetes_Hyoty.fa'
+ '014_E1_30CxC.fa' '014_F1_PARAFFINBLANKBLOCKS.fa'
+ '014_G1_MS5CASES5CONTROLS.fa' '014_G5_Hultin_MS.fa' '014_G6_Hultin_MS.fa'
+ '014_G7_MSNEW2.fa' '014_J1_FRISKDIABETES.fa' '014_N1_Anethovirus.fa'
+ '014_O-Q1_Larynx.fa' '014_P_Lagheden_Matti-HPV-vacc-CIN3.fa'
+ '014_R1_Hultin_Caski.fa' '015_F2_20160119.fa'
+ '015_F_Lagheden_ACCES_HPVneg.fa'] 19
+0 011_G5_96ALL-MiSeq.fa (1, 14634)
+1 011_N19_VIRASKINFAPMISEQ.fa (1, 2453)
+2 013_E2_SCC.fa (1, 4553)
+3 013_H4.fa (1, 2066)
+4 014_B_Prostate.fa (1, 2460)
+5 014_D3_Diabetes_Hyoty.fa (1, 422)
+6 014_E1_30CxC.fa (1, 5768)
+7 014_F1_PARAFFINBLANKBLOCKS.fa (1, 5294)
+8 014_G1_MS5CASES5CONTROLS.fa (1, 9234)
+9 014_G5_Hultin_MS.fa (1, 23739)
+10 014_G6_Hultin_MS.fa (1, 14218)
+11 014_G7_MSNEW2.fa (1, 1898)
+12 014_J1_FRISKDIABETES.fa (1, 9642)
+13 014_N1_Anethovirus.fa (1, 829)
+14 014_O-Q1_Larynx.fa (1, 32739)
+15 014_P_Lagheden_Matti-HPV-vacc-CIN3.fa (1, 8110)
+16 014_R1_Hultin_Caski.fa (1, 31743)
+17 015_F2_20160119.fa (1, 7479)
+18 015_F_Lagheden_ACCES_HPVneg.fa (1, 11320)
+------------LEAVE OUT--------------
+we are using EXPERIMENT LEAVE OUT (exp= 5 ). 
+ Train and test sizes: (188179,) (422,)
+counts of classes in training set : [182514   5665]
+counts of classes in test: [422]  virus shape  (1, 0)
+NO VIRUSES IN TEST SET, ABORTING
